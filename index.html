@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FashionHub | Clothing Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-marquee">
+  <div class="marquee-content">
+    ✦ Free Shipping All Over India   ✦   Cash On Delivery Available   ✦   Easy 7-Day Returns   ✦   Premium Handloom Sarees ✦
+  </div>
+</div>
+
+
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Vastranand</div>
+  <ul class="menu">
+    
+
+  <!-- Sarees -->
+  <li class="has-mega">
+    <a href="#">Sarees <span class="dropdown-icon">▼</span></a>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>By Type</h4>
+        <a href="#">Banarasi</a>
+        <a href="#">Silk Sarees</a>
+        <a href="#">Cotton Sarees</a>
+        <a href="#">Chiffon</a>
+        <a href="#">Georgette</a>
+      </div>
+      <div class="mega-column">
+        <h4>Occasion</h4>
+        <a href="#">Wedding</a>
+        <a href="#">Festive</a>
+        <a href="#">Party Wear</a>
+        <a href="#">Daily Wear</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Kurta Sets -->
+  <li class="has-mega">
+    <a href="#">Kurta Sets <span class="dropdown-icon">▼</span></a>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Styles</h4>
+        <a href="#">Anarkali</a>
+        <a href="#">Straight Kurta</a>
+        <a href="#">A-Line</a>
+        <a href="#">Sharara Sets</a>
+      </div>
+      <div class="mega-column">
+        <h4>Fabric</h4>
+        <a href="#">Cotton</a>
+        <a href="#">Rayon</a>
+        <a href="#">Silk Blend</a>
+        <a href="#">Linen</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Dresses -->
+  <li class="has-mega">
+    <a href="#">Dresses <span class="dropdown-icon">▼</span></a>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Styles</h4>
+        <a href="#">Maxi Dresses</a>
+        <a href="#">Midi Dresses</a>
+        <a href="#">A-Line</a>
+        <a href="#">Bodycon</a>
+      </div>
+      <div class="mega-column">
+        <h4>Occasion</h4>
+        <a href="#">Party Wear</a>
+        <a href="#">Casual</a>
+        <a href="#">Evening Wear</a>
+        <a href="#">Summer Wear</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Accessories -->
+  <li class="has-mega">
+    <a href="#">Accessories <span class="dropdown-icon">▼</span></a>
+    <div class="mega-menu">
+      <div class="mega-column">
+        <h4>Jewellery</h4>
+        <a href="#">Necklaces</a>
+        <a href="#">Earrings</a>
+        <a href="#">Bangles</a>
+        <a href="#">Rings</a>
+      </div>
+      <div class="mega-column">
+        <h4>Other Accessories</h4>
+        <a href="#">Handbags</a>
+        <a href="#">Clutches</a>
+        <a href="#">Belts</a>
+        <a href="#">Hair Accessories</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- Sale -->
+  <li>
+    <a href="#" class="sale-link">Sale</a>
+  </li>
+<li>
+  <a href="#video-content">Video Content</a>
+</li>
+
+<li>
+  <a href="#best-sellers">Best Sellers</a>
+</li>
+
+</ul>
+<div class="nav-right">
+  <div class="user-menu">
+
+    <!-- USER ICON -->
+    <a href="login.html" class="user-icon"><i class="fa fa-user user-icon"></i>
+</a>
+
+
+    <!-- USER NAME -->
+    <span class="user-name" id="userName">Login</span>
+
+    <!-- DROPDOWN -->
+    <div class="user-dropdown" id="userDropdown">
+      <a href="profile.html">My Profile</a>
+    
+      <a href="#" class="logout" onclick="logout()">Logout</a>
+    </div>
+  </div>
+
+  <a href="cart.html" class="cart-icon">
+   <i class="fa fa-shopping-cart cart-icon"></i>
+<span class="cart-count"></span>
+  </a>
+</div>
+</nav>
+
+
+
+<!-- Hero -->
+<section class="hero temple-border">
+  <h1>Discover Elegant Fashion</h1>
+  <p>Curated collections inspired by tradition & trends</p>
+  <a href="#gallery" class="hero-cta">Start Shopping</a>
+</section>
+
+
+
+
+
+<!-- Gallery -->
+<section class="container temple-border" id="gallery">
+  <h2 class="section-title">New Arrivals</h2>
+
+  <div class="gallery">
+<div class="card">
+<img src="#">
+<span class="tag">NEW</span>
+<div class="overlay">
+<h3>Traditional Saree</h3>
+<p>₹999 <span>₹1599</span></p>
+<a href="#" class="cta-btn">View</a>
+</div>
+</div>
+    <div class="card">
+      <img src="#">
+      <span class="tag sale">SALE</span>
+      <div class="overlay">
+        <h3>Designer Kurta</h3>
+        <p>₹799 <span>₹1299</span></p>
+       <a href="#" class="cta-btn">View</a>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="#">
+      <div class="overlay">
+        <h3>Elegant Dress</h3>
+        <p>₹599 <span>₹999</span></p>
+        <a href="#" class="cta-btn">View</a>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="#">
+      <div class="overlay">
+        <h3>Fashion Accessories</h3>
+        <p>₹399 <span>₹699</span></p>
+        <a href="#" class="cta-btn">View</a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="container awareness">
+  <h2 class="section-title">Style & Inspiration</h2>
+
+  <div class="gallery">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x500">
+      <div class="overlay">
+        <h3>How to Style Saree for Weddings</h3>
+        <a href="#" class="cta-btn">Read Guide</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x500">
+      <div class="overlay">
+        <h3>Top Trending Sarees in India</h3>
+        <a href="#" class="cta-btn">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x500">
+      <div class="overlay">
+        <h3>Which Saree Suits Your Body Type?</h3>
+        <a href="#" class="cta-btn">Find Out</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Product Categories -->
+<section class="container categories">
+  <h2 class="section-title">Shop by Category</h2>
+
+  <div class="category-grid gallery">
+
+  <div class="card">
+    <img src="#">
+    <div class="overlay">
+      <h3>Sarees</h3>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="#">
+    <div class="overlay">
+      <h3>Kurta Sets</h3>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="#">
+    <div class="overlay">
+      <h3>Dresses</h3>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="#">
+    <div class="overlay">
+      <h3>Accessories</h3>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<!-- Trending Section -->
+<section class="container trending">
+  <h2 class="section-title">Trending Now</h2>
+
+ <div class="trending-grid gallery">
+
+  <div class="card">
+    <img src="#">
+    <span class="tag">TRENDING</span>
+    <div class="overlay">
+      <h3>Banarasi Silk Saree</h3>
+      <p>₹1499 <span>₹2199</span></p>
+      <a href="#" class="cta-btn">View</a>
+    </div>
+  </div>
+<div class="card">
+    <img src="saree1.jpg">
+    <span class="tag">TRENDING</span>
+    <div class="overlay">
+      <h3>Kanjeevaram Silk Saree</h3>
+      <p>₹2299 <span>₹3199</span></p>
+      <a href="product.html" class="cta-btn">View</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="#">
+    <span class="tag">TRENDING</span>
+    <div class="overlay">
+      <h3>Festive Kurta</h3>
+      <p>₹1199 <span>₹1799</span></p>
+      <a href="#" class="cta-btn">View</a>
+    </div>
+  </div>
+
+</div>
+
+</section>
+<!-- Shop by Founder -->
+<section class="container founder">
+  <h2 class="section-title">Shop by Founder</h2>
+  
+
+  <div class="founder-grid gallery">
+
+  <div class="card">
+    <img src="#">
+    <div class="overlay">
+      <h3>Festive Edit</h3>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="#">
+    <div class="overlay">
+      <h3>Wedding Picks</h3>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="#">
+    <div class="overlay">
+      <h3>Everyday Elegance</h3>
+      <a href="#" class="cta-btn">Explore</a>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+  <div class="controls">
+    <a href="#" onclick="prevImage();return false;">‹</a>
+    <a href="#" onclick="nextImage();return false;">›</a>
+  </div>
+</div>
+<section class="container" id="video-content">
+  <h2 class="section-title">Video Content</h2>
+
+  <div class="gallery">
+
+    <div class="card">
+      <video src="#" muted loop></video>
+      <div class="overlay">
+        <h3>Festive Saree Look</h3>
+        <a href="#" class="cta-btn">Watch</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <video src="#"muted loop></video>
+      <div class="overlay">
+        <h3>Wedding Collection</h3>
+        <a href="#" class="cta-btn">Watch</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="container" id="best-sellers">
+  <h2 class="section-title">Best Sellers</h2>
+
+  <div class="gallery">
+
+    <div class="card">
+      <img src="#">
+      <span class="tag">BEST</span>
+      <div class="overlay">
+        <h3>Banarasi Saree</h3>
+        <p>₹1799 <span>₹2499</span></p>
+        <a href="#" class="cta-btn">View</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="#">
+      <span class="tag">BEST</span>
+      <div class="overlay">
+        <h3>Designer Kurta Set</h3>
+        <p>₹1399 <span>₹1999</span></p>
+        <a href="#" class="cta-btn">View</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+   Demo Project
+</footer>
+
+<script src="script.js"></script>
+<!-- Exit Intent Popup -->
+<div class="popup" id="exitPopup">
+  <div class="popup-content">
+    <h2>Get ₹200 OFF</h2>
+    <p>On your first order with Vastranand</p>
+    <input type="email" placeholder="Enter your email">
+    <button class="cta-btn">Unlock Offer</button>
+    <span class="close-popup" onclick="closePopup()">×</span>
+  </div>
+</div>
+
+</body>
+</html>

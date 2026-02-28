@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kanjeevaram Silk Saree | Vastranand</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="container product-page">
+
+  <!-- PRODUCT GRID -->
+  <div class="product-grid">
+
+    <!-- LEFT: IMAGES -->
+    <div class="product-images">
+      <img id="mainImage" src="saree1.jpg" class="main-img">
+
+      
+    </div>
+
+    <!-- RIGHT: DETAILS -->
+    <div class="product-details">
+
+      <h1>Kanjeevaram Silk Saree</h1>
+
+      <p class="price">
+        ₹2299 <span>₹3199</span>
+      </p>
+
+      <p class="rating">
+        ⭐⭐⭐⭐⭐ (4.8 / 5 from 1,560 reviews)
+      </p>
+
+      <p class="desc">
+        Authentic Kanjeevaram silk saree woven with pure mulberry silk
+        and rich gold zari borders, ideal for weddings and grand occasions.
+      </p>
+
+      <!-- FABRIC INFO -->
+      <ul class="product-info">
+        <li><strong>Fabric:</strong> Pure Kanjeevaram Silk</li>
+        <li><strong>Length:</strong> 5.5m + 0.8m blouse</li>
+        <li><strong>Occasion:</strong> Wedding / Traditional Events</li>
+        <li><strong>Care:</strong> Dry Clean Only</li>
+      </ul>
+
+      <!-- TRUST -->
+      <div class="trust-badges">
+        <span>✔ COD Available</span>
+        <span>✔ Easy Returns</span>
+        <span>✔ Free Shipping</span>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="actions">
+        <button class="cta-btn" onclick="addToCart()">
+          Add to Cart
+        </button>
+        <button class="cta-btn secondary">
+          Buy Now
+        </button>
+      </div> <br>
+<div class="thumbs">
+        <img src="https://via.placeholder.com/600x800?text=Kanjeevaram+Saree" onclick="changeImage(this.src)">
+        <img src="https://via.placeholder.com/600x800?text=Zari+Border" onclick="changeImage(this.src)">
+        <img src="https://via.placeholder.com/600x800?text=Silk+Texture" onclick="changeImage(this.src)">
+      </div>
+    </div>
+  </div>
+
+  <!-- EXTRA SECTIONS -->
+  <div class="product-extra">
+
+    <h2 class="section-title">Why You'll Love It</h2>
+    <p>
+      Known for its durability and timeless elegance, this Kanjeevaram saree
+      is a treasured heirloom piece passed down through generations.
+    </p>
+
+    <h2 class="section-title">Styling Tips</h2>
+    <p>
+      Style with temple jewellery, jasmine gajra, and a traditional
+      braided hairstyle for a classic South Indian bridal look.
+    </p>
+
+    <h2 class="section-title">Customer Reviews</h2>
+    <p>⭐ 4.8 / 5 based on 1,500+ reviews</p>
+
+  </div>
+
+</section>
+
+<!-- ABOUT VASTRANAND -->
+<section class="about-brand-2col scroll-animate">
+
+  
+
+  <!-- RIGHT CONTENT -->
+  <div class="about-content animate-left">
+    <h2 class="section-title">About Vastranand</h2>
+
+    <p>
+      Vastranand is a premium ethnic wear brand dedicated to preserving
+      India’s rich textile heritage. We bring you authentic handwoven
+      sarees crafted by skilled artisans from across India.
+    </p>
+
+    <p>
+      From royal Banarasi silks to timeless Kanjeevaram weaves, every
+      saree is carefully curated to ensure elegance, authenticity,
+      and lasting quality for your special moments.
+    </p>
+
+    <div class="brand-points">
+      <span>✔ Authentic Handwoven Sarees</span>
+      <span>✔ Direct From Artisans</span>
+      <span>✔ 50,000+ Happy Customers</span>
+      <span>✔ Quality Assured</span>
+    </div>
+  </div>
+<div class="about-image animate-right">
+    <img src="about.jpg" alt="About Vastranand">
+  </div>
+</section>
+
+
+<script src="script.js"></script>
+
+<script>
+  function changeImage(src) {
+    document.getElementById("mainImage").src = src;
+  }
+
+  function addToCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+      name: "Kanjeevaram Silk Saree",
+      price: 2299
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Added to cart!");
+    location.reload();
+  }
+</script>
+
+</body>
+</html>

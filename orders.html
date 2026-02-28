@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Orders | Vastranand</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .order-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .order-items li {
+      margin-bottom: 6px;
+    }
+
+    .status {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .placed { background: #fff3cd; color: #856404; }
+    .shipped { background: #cce5ff; color: #004085; }
+    .delivered { background: #d4edda; color: #155724; }
+
+    .cancel-btn {
+      margin-top: 12px;
+      background: #b71c1c;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .cancel-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .empty-orders {
+      text-align: center;
+      padding: 40px;
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<section class="container">
+  <h2 class="section-title">My Orders</h2>
+  <div id="ordersContainer"></div>
+</section>
+
+<script>
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const container = document.getElementById("ordersContainer");
+
+  // 🔄 DEMO STATUS PROGRESSION
+  orders.forEach(order => {
+    if (order.status === "Placed" && Math.random() > 0.6) {
+      order.status = "Shipped";
+    } else if (order.status === "Shipped" && Math.random() > 0.6) {
+      order.status = "Delivered";
+    }
+  });
+  localStorage.setItem("orders", JSON.stringify(orders));
+
+  function cancelOrder(index) {
+    if (!confirm("Are you sure you want to cancel this order?")) return;
+    orders.splice(index, 1);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    location.reload();
+  }
+
+  if (orders.length === 0) {
+    container.innerHTML = `
+      <div class="empty-orders">
+        No orders yet 🛍️<br><br>
+        <a href="index.html" class="cta-btn">Start Shopping</a>
+      </div>
+    `;
+  } else {
+    orders.reverse().forEach((order, index) => {
+      let itemsHTML = "";
+      order.items.forEach(item => {
+        itemsHTML += `<li>${item.name} — ₹${item.price}</li>`;
+      });
+
+      container.innerHTML += `
+        <div class="order-card">
+          <div class="order-header">
+            <div><strong>Order ID:</strong> ${order.id}</div>
+            <div><strong>Date:</strong> ${order.date}</div>
+          </div>
+
+          <div class="order-header">
+            <div><strong>Payment:</strong> ${order.payment}</div>
+            <div><strong>Total:</strong> ₹${order.total}</div>
+          </div>
+
+          <span class="status ${order.status.toLowerCase()}">
+            ${order.status}
+          </span>
+
+          <ul class="order-items">
+            ${itemsHTML}
+          </ul>
+
+          <button
+            class="cancel-btn"
+            onclick="cancelOrder(${orders.length - 1 - index})"
+            ${order.status !== "Placed" ? "disabled" : ""}
+          >
+            Cancel Order
+          </button>
+        </div>
+      `;
+    });
+  }
+</script>
+
+</body>
+</html>

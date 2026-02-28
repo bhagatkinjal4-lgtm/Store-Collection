@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f7f3ef;
+}
+
+.profile-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* SIDEBAR */
+.profile-sidebar {
+  width: 280px;
+  background: #6b3e2e;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.user-icon {
+  font-size: 60px;
+  background: #fff;
+  color: #6b3e2e;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.profile-sidebar h2 {
+  font-size: 20px;
+}
+
+.profile-sidebar p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.menu {
+  list-style: none;
+  text-align: left;
+}
+
+.menu li {
+  padding: 12px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+
+}
+
+.menu li:hover,
+.menu li.active {
+  background: rgba(255,255,255,0.15);
+}
+
+.logout {
+  color: #ffd6c9;
+}
+
+/* CONTENT */
+.profile-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.profile-content h1 {
+  margin-bottom: 25px;
+  color: #6b3e2e;
+}
+
+.profile-form {
+  max-width: 500px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+button {
+  background: #6b3e2e;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5a3225;
+}
